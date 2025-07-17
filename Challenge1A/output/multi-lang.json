@@ -3,11 +3,6 @@
   "outline": [
     {
       "level": "H1",
-      "text": "Title: Test CASE 1",
-      "page": 1
-    },
-    {
-      "level": "H2",
       "text": "HEADING 1 in English",
       "page": 1
     },
@@ -17,13 +12,18 @@
       "page": 1
     },
     {
-      "level": "H2",
-      "text": "शीर्षक",
+      "level": "H1",
+      "text": "शीर्षक 3",
       "page": 1
     },
     {
       "level": "H2",
-      "text": "شي ت يمس ا",
+      "text": "ا سمي ت يش",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "ري",
       "page": 1
     }
   ]

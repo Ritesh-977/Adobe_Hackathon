@@ -1,33 +1,25 @@
-FROM python:3.11-slim
-
-ENV TESSDATA_PREFIX=/usr/share/tesseract-ocr/4.00/tessdata/
-
-RUN apt-get update && apt-get install -y \
-    tesseract-ocr \
-    curl \
-    poppler-utils \
-    libgl1-mesa-glx \
-    libglib2.0-0 \
-    libsm6 \
-    libxext6 \
-    libxrender1 \
-    && apt-get clean && rm -rf /var/lib/apt/lists/*
-
-# Download language files to the correct location
-RUN mkdir -p $TESSDATA_PREFIX && \
-    cd $TESSDATA_PREFIX && \
-    curl -LO https://github.com/tesseract-ocr/tessdata/raw/main/eng.traineddata && \
-    curl -LO https://github.com/tesseract-ocr/tessdata/raw/main/hin.traineddata && \
-    curl -LO https://github.com/tesseract-ocr/tessdata/raw/main/ara.traineddata
+# Use a minimal, modern base image and specify platform
+FROM --platform=linux/amd64 python:3.10-slim
 
 WORKDIR /app
 
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    tesseract-ocr \
+    poppler-utils \
+    gcc \
+    libsm6 \
+    libxext6 \
+    libglib2.0-0 \
+    libgl1 \
+    libgl1-mesa-glx \
+    && rm -rf /var/lib/apt/lists/*
+
 # Install Python dependencies
-RUN pip install --no-cache-dir pymupdf pytesseract pillow
+RUN pip install --no-cache-dir pymupdf pdf2image pytesseract Pillow opencv-python
 
-COPY . .
+# Copy your python code and any other resources into the image
+COPY . /app
 
-# Optional: explicitly tell pytesseract where the binary is
-ENV TESSERACT_CMD=/usr/bin/tesseract
-
-CMD ["python", "main.py"]
+# By default, run your main script (adjust if your script name differs)
+ENTRYPOINT ["python", "main.py"]
