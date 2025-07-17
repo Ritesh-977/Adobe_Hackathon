@@ -1,4 +1,4 @@
-# 📄  CHALLENGE 1B: PDF Outline Extractor
+# 📄  CHALLENGE 1A: PDF Outline Extractor
 
 This tool extracts a **structured outline** from PDFs — including **Title**, **Headings (H1/H2/H3)** 
 
