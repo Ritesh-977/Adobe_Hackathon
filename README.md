@@ -24,12 +24,12 @@ This tool extracts a **structured outline** from PDFs — including **Title**, *
 
 ## 📚 Libraries Used
 
-`PyMuPDF` (`fitz`) ( PDF parsing and text extraction )
-`pytesseract`   (OCR for image-based PDFs )     
-`Pillow`        ( Image processing (used by `pytesseract`) )
-`pdf2image`  (Convert PDF pages to images for OCR)
-`OpenCV`	  (Noise reduction, binarization, deskewing (image processing))
-`json`, `os` ( File handling )
+- `PyMuPDF` (`fitz`) ( PDF parsing and text extraction )
+- `pytesseract`   (OCR for image-based PDFs )     
+- `Pillow`        ( Image processing (used by `pytesseract`) )
+- `pdf2image`  (Convert PDF pages to images for OCR)
+- `OpenCV`	  (Noise reduction, binarization, deskewing (image processing))
+- `json`, `os` ( File handling )
 
 ## 🛠 How to Build & Run
 
