@@ -185,6 +185,7 @@ def main():
     for filename in os.listdir(input_dir):
         if filename.lower().endswith(".pdf"):
             inp_path = os.path.join(input_dir, filename)
+            print("processing",filename)
             result = extract_outline(inp_path)
             out_name = os.path.splitext(filename)[0] + ".json"
             out_path = os.path.join(output_dir, out_name)
