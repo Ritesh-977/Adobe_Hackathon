@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "input_documents": [
+      "Breakfast Ideas.pdf",
+      "Dinner Ideas - Mains_1.pdf",
+      "Dinner Ideas - Mains_2.pdf",
+      "Dinner Ideas - Mains_3.pdf",
+      "Dinner Ideas - Sides_1.pdf",
+      "Dinner Ideas - Sides_2.pdf",
+      "Dinner Ideas - Sides_3.pdf",
+      "Dinner Ideas - Sides_4.pdf",
+      "Lunch Ideas.pdf"
+    ],
+    "persona": "Food Contractor",
+    "job_to_be_done": "Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
+    "processing_timestamp": "2025-07-18T18:18:52.896696"
+  },
+  "extracted_sections": [
+    {
+      "document": "Dinner Ideas - Mains_3.pdf",
+      "section_title": "• Return chicken to the skillet and cook until heated through.",
+      "importance_rank": 1,
+      "page_number": 1
+    },
+    {
+      "document": "Dinner Ideas - Sides_3.pdf",
+      "section_title": "o 2 cloves garlic",
+      "importance_rank": 2,
+      "page_number": 1
+    },
+    {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "section_title": "• 1 teaspoon thyme",
+      "importance_rank": 3,
+      "page_number": 1
+    },
+    {
+      "document": "Dinner Ideas - Sides_4.pdf",
+      "section_title": "o Scramble eggs in the same pan.",
+      "importance_rank": 4,
+      "page_number": 1
+    },
+    {
+      "document": "Dinner Ideas - Sides_2.pdf",
+      "section_title": "Churros",
+      "importance_rank": 5,
+      "page_number": 1
+    }
+  ],
+  "subsection_analysis": [
+    {
+      "document": "Dinner Ideas - Mains_3.pdf",
+      "refined_text": "• Place duck on a roasting rack and roast for 1 hour and 30 minutes until skin is crispy",
+      "page_number": 1
+    },
+    {
+      "document": "Dinner Ideas - Sides_3.pdf",
+      "refined_text": "o Simmer for 30 minutes until lentils are tender",
+      "page_number": 1
+    },
+    {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "refined_text": "• Bake for 45 minutes until vegetables are tender",
+      "page_number": 1
+    },
+    {
+      "document": "Dinner Ideas - Sides_4.pdf",
+      "refined_text": "o Add noodles, fish sauce, tamarind paste, sugar, and lime juice, stir to combine",
+      "page_number": 1
+    },
+    {
+      "document": "Dinner Ideas - Sides_2.pdf",
+      "refined_text": "o Chill for at least 1 hour before serving.",
+      "page_number": 1
+    }
+  ]
+}
