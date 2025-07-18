@@ -10,10 +10,10 @@ This tool extracts a **structured outline** from PDFs — including **Title**, *
 - Classifies headings based on relative font sizes (`H1`, `H2`, `H3`), using the top 3 most frequent font sizes as thresholds.
 
 🔹 2. **OCR Fallback for Image-Based PDFs**
-- If no text is detected on a page, the page is rendered as an image.
-- OCR is performed using Tesseract via `pytesseract`.
-- OCR is **language-agnostic** with automatic script detection (`osd`).
-- Includes **Right-to-Left (RTL)** language support for scripts like Arabic, Hebrew, etc.
+- If no text is found (scanned/image-based PDF), each page is converted to an image using pdf2image.
+- Advanced image preprocessing (denoising, adaptive thresholding, contrast enhancement) is applied via OpenCV.
+- Tesseract OCR extracts text and layout information.
+- Heading detection uses bounding box sizes, position on the page, and text heuristics (ALL CAPS, Title Case, numbering patterns, etc).
 
  🔹 3. **Heading Detection Filters**
 - Filters out noise such as:
@@ -24,11 +24,12 @@ This tool extracts a **structured outline** from PDFs — including **Title**, *
 
 ## 📚 Libraries Used
 
-`PyMuPDF` (`fitz`) ( PDF parsing and text extraction )
-`pytesseract`   (OCR for image-based PDFs )     
-`Pillow`        ( Image processing (used by `pytesseract`) )
-`collections`   ( Font frequency analysis (`Counter`) )
-`json`, `os`, `io` ( File handling and IO )
+- `PyMuPDF` (`fitz`) ( PDF parsing and text extraction )
+- `pytesseract`   (OCR for image-based PDFs )     
+- `Pillow`        ( Image processing (used by `pytesseract`) )
+- `pdf2image`  (Convert PDF pages to images for OCR)
+- `OpenCV`	  (Noise reduction, binarization, deskewing (image processing))
+- `json`, `os` ( File handling )
 
 ## 🛠 How to Build & Run
 
